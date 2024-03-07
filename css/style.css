@@ -66,6 +66,7 @@ header.navbar-container .nav-list li a {
 header.navbar-container .nav-list li:hover a {
     background-color: #FF9843;
     color: white;
+    transition: 0.3s;
 }
 
 main {
@@ -171,6 +172,7 @@ main aside .social-media li a {
 
 main aside .social-media li a:hover {
     color: #FFDD95;
+    transition: 0.2s;
 }
 
 footer {
@@ -182,6 +184,16 @@ footer {
     margin-inline: auto;
     width: 100%;
     letter-spacing: 2px;
+}
+
+#icon-cat {
+    width: 35px;
+}
+
+#icon-cat:hover {
+    background-color: #FFDD95;
+    border-radius: 50%;
+    transition: 0.2s;
 }
 
 /* Medium devices (768px dan di bawahnya) */
