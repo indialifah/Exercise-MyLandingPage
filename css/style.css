@@ -1,0 +1,218 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.dm-serif display-regular {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.dm-serif display-regular-italic {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+body {
+    font-family: 'DM Serif Display', serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+
+    background-color: #FFDD95;
+}
+
+header.navbar-container .logo img {
+    width: 10px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    /* border-radius: 999px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #232B2B;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 5%;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: #FF9843;
+    color: white;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+}
+
+main .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 100px;
+}
+
+main .content .content-description {
+    flex: 1 1;
+    color: #232B2B;
+}
+
+main .content .content-description .title {
+    margin-block: 1rem;
+    font-size: 3.5rem;
+}
+
+main .content .content-description p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+main .content .content-description button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    margin-block-start: 1rem;
+    background-color: #FF9843;
+    font-family: 'DM Serif Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+    background-color: #FFDD95;
+    color: #232B2B;
+}
+
+main .content .content-image {
+    flex: 1;
+    display: flex;
+}
+
+main .content .content-image img {
+    width: 300px;
+    min-width: 250px;
+    margin: auto;
+}
+
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+    z-index: 0;
+}
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    background-color: #FF9843;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside .social-media li {
+    list-style-type: none;
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+    color: #FFDD95;
+}
+
+footer {
+    padding: 10px;
+    color: #232B2B;
+    background-color: #FFDD95;
+    text-align: center;
+    font-weight: bold;
+    margin-inline: auto;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+/* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+
+    main {
+        padding: 1rem 3rem;
+    }
+
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .content .content-description .title {
+        font-size: 3rem;
+    }
+    
+    main .content .content-description p {
+        font-size: 1rem;
+    }
+    
+    main .content .content-image {
+        order: -1;
+    }
+}
